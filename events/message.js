@@ -1,10 +1,8 @@
 const settings = require('../settings.json');
- const main = JSON.parse(fs.readFileSync('../maintainance.json'))
 module.exports = message => {
   let client = message.client;
     client.user.setGame(`Serving ${client.guilds.array().length} guild(s)!`)
   if (message.author.bot) return;
-    if(main.status === true && !message.member.roles.find('id', '325604423038402561')) return; 
   if (!message.content.startsWith(settings.prefix)) return;
   let unfilcommand = message.content.split(' ')[0].slice(settings.prefix.length);
     let command = unfilcommand.toLowerCase()
