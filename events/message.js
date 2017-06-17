@@ -4,7 +4,8 @@ module.exports = message => {
     client.user.setGame(`Serving ${client.guilds.array().length} guild(s)!`)
   if (message.author.bot) return;
   if (!message.content.startsWith(settings.prefix)) return;
-  let command = message.content.split(' ')[0].slice(settings.prefix.length);
+  let unfilcommand = message.content.split(' ')[0].slice(settings.prefix.length);
+    let command = unfilcommand.toLowerCase()
   let params = message.content.split(' ').slice(1);
   let perms = client.elevation(message);
   let cmd;
