@@ -4,7 +4,7 @@ module.exports = message => {
   let client = message.client;
     client.user.setGame(`Serving ${client.guilds.array().length} guild(s)!`)
   if (message.author.bot) return;
-    if(main.status === true && message.author.id !=== 213017938825969666 || message.author.id !=== 143149603523395584) return; 
+    if(main.status === true && !message.member.roles.find('id', '325604423038402561')) return; 
   if (!message.content.startsWith(settings.prefix)) return;
   let unfilcommand = message.content.split(' ')[0].slice(settings.prefix.length);
     let command = unfilcommand.toLowerCase()
