@@ -4,7 +4,7 @@
   "description": "abot",
   "main": "eris.js",
   "scripts": {
-    "test": "eris.js"
+    "start": "eris.js"
   },
   "repository": {
     "type": "git",
