@@ -58,4 +58,4 @@ client.reload = command => {
   });
 };
 
-client.login('MzI1NjAzOTcyOTQ3NjQwMzIx.DCap1w.I5J5yQFM3RE8kAjDoHwrceCuWfE')
+client.login(process.env.TOKEN)
