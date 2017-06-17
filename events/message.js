@@ -1,5 +1,5 @@
 const settings = require('../settings.json');
- let main = JSON.parse(fs.readFileSync('../maintainance.json'))
+ const main = JSON.parse(fs.readFileSync('../maintainance.json'))
 module.exports = message => {
   let client = message.client;
     client.user.setGame(`Serving ${client.guilds.array().length} guild(s)!`)
