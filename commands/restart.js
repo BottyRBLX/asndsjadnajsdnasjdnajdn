@@ -3,7 +3,7 @@ const exec = require('child_process').exec;
 exports.run = function(bot, message, args){
   message.channel.send('Restarting...')
   bot.destroy()
-  var cmd = 'pm2 restart 0'
+  var cmd = 'node eris.js'
   exec(cmd, function(error, stdout, stderr) {
     console.log(error)
   })
