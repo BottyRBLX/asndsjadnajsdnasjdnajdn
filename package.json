@@ -2,7 +2,7 @@
   "name": "peribot",
   "version": "1.0.0",
   "description": "abot",
-  "main": "eris.js",
+  "main": "node eris.js",
   "scripts": {
     "start": "eris.js"
   },
