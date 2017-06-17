@@ -1,1 +1,1 @@
-worker: node eris.js
+worker: pm2 start eris.js --name "peribot"
