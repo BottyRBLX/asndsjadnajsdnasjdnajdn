@@ -1,6 +1,6 @@
 const fs = require('fs')
 exports.run = function(bot, message, args){
- let main = require('../maintainance.json')
+ let main = JSON.parse(fs.readFileSync('../maintainance.json'))
  if(main.status === true) {
      var maint = {
          status: false,
