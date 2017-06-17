@@ -1,1 +1,1 @@
-worker: eris.js
+worker: node eris.js
