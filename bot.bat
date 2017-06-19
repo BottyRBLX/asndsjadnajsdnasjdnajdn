@@ -1,2 +1,2 @@
-pm2 start eris.js --name "PeriBot"
+nodemon eris.js
 PAUSE

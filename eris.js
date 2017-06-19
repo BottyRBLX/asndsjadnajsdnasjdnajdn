@@ -16,10 +16,12 @@ client.elevation = message => {
   let permlvl = 0;
   var maing = client.guilds.find('id', '325604298182492160')
   let me = maing.members.find('id', message.author.id)
-  if (me.roles.find('id', '')) permlvl = 2;
-  if (me.roles.find('id', '')) permlvl = 3;
+  if(me){
+  if (me.roles.find('id', '326046236257812485')) permlvl = 2;
+  if (me.roles.find('id', '326046245506252802')) permlvl = 3;
   let oarole = message.guild.roles.find('id', '324603477634318337')
   if (me.roles.find('id', '325604423038402561')) permlvl = 4;
+  }
   return permlvl;
 };
 
@@ -58,4 +60,4 @@ client.reload = command => {
   });
 };
 
-client.login(process.env.TOKEN)
+client.login('MzI1NjAzOTcyOTQ3NjQwMzIx.DChFLQ.y38sZg9HjbZ8HF55nIu0_YTL2xk')
