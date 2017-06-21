@@ -1,3 +1,5 @@
+const Discord = require('discord.js')
+
 exports.run = function(client, message, args){
   let reason = args.join(' ');
   let user = message.mentions.users.first();
