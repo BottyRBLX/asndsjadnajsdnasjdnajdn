@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 
 exports.run = function(client, message, args){
-  let reason = args.join(' ');
+  let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('I do not have the correct permissions.').catch(console.error);
   let modlog = client.channels.find('name', 'mod-log');
