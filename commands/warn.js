@@ -13,7 +13,6 @@ exports.run = function(client, message, args){
   return client.channels.get(modlog.id).send({embed});
   //message.channel.sendMessage(user.tag + ` - have recived a warning for: ` + reason + ` - from: ` + message.author.tag);
 };
-}
 
 exports.conf = {
   enabled: true,
