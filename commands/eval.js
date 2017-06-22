@@ -1,3 +1,5 @@
+const discord = require('discord.js')
+
 exports.run = function(client, message, args){
   try {
       const code = args.join(" ");
@@ -5,8 +7,14 @@ exports.run = function(client, message, args){
 
       if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
-
-      message.channel.send(clean(evaled), {code:"xl"});
+        
+      
+      var embed = new discord.RichEmbed()
+      .addField('Output', clean(evaled))
+      .setColor("#8000ff")
+      .setTimestamp()
+      .setFooter('eval')
+      message.channel.sendEmbed(embed)
     }  catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
@@ -17,7 +25,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['e'],
-  permLevel: 4
+  permLevel: 6
 };
 
 exports.help = {
