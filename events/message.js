@@ -7,7 +7,7 @@ const blackgu = []
 
 module.exports = message => {
   let client = message.client;
-    client.user.setGame(`Serving ${client.guilds.array().length} guild(s)!`)
+    client.user.setGame(`Serving ${client.guilds.array().length} guild(s)!`) 
   if (message.author.bot) return;
   if (!message.content.startsWith(settings.prefix)) return;
     if(blacklistedids.indexOf(message.author.id) > -1){
