@@ -14,7 +14,7 @@ exports.run = function(client, message, args){
       .setColor("#8000ff")
       .setTimestamp()
       .setFooter('eval')
-      message.channel.sendEmbed(embed)
+      message.channel.send('```JS' + clean(evaled) + '```')
     }  catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
