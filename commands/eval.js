@@ -9,7 +9,7 @@ exports.run = function(client, message, args){
         evaled = require("util").inspect(evaled);
         
       
-      message.channel.send('```JS\n' + clean(evaled) + '```')
+          message.channel.send(clean(evaled), {code:"xl"});
     }  catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
