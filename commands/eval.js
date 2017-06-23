@@ -9,11 +9,6 @@ exports.run = function(client, message, args){
         evaled = require("util").inspect(evaled);
         
       
-      var embed = new discord.RichEmbed()
-      .addField('Output', clean(evaled))
-      .setColor("#8000ff")
-      .setTimestamp()
-      .setFooter('eval')
       message.channel.send('```JS\n' + clean(evaled) + '```')
     }  catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
